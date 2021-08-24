@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.6">
+        <title>Contact | Debunkd</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" type="text/css">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class = sub-wrapper>
+                <div class = "navbar">
+                    <ul class = "navlist">
+                        <li><a href = "/about">About</a></li>
+                        <li><a href = "/debunk">Debunk Article</a></li>
+                        <li><a href = "#">Contact</a></li>
+                    </ul>
+                </div>
+                <h1 class = "heading">Contact</h1>
+                <h1 class = "subheading">Shoot me a message. 📧</h1>
+                <form id="contact-form" name = "contact-form" autocomplete="off" method="POST">
+                    <input id = "email-input" placeholder="Email" autocomplete="off">
+                    <input id = "name-input" placeholder="Name" autocomplete="off">
+                    <input id = "subject-input" placeholder="Subject" autocomplete="off">
+                    <textarea id = "message-area" placeholder="Message" rows=8></textarea>
+                    <p id = "contact-error-tag"></p>
+                    <a id = "send-button" onclick = "sendMessage();">send</a>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='scripts/contact.js')}}"></script>
+
+    </body>
+</html>

@@ -36,6 +36,7 @@ body {
 /* navbar unique items*/
 
 .navbar {
+    z-index: 100;
     top: 1rem;
     position: fixed;
     border-style: solid;
@@ -63,10 +64,10 @@ body {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
+    transition: filter 0.3s;
 }
 
 .navlist li a:hover {
-    transition: 0.3s;
     filter:drop-shadow(0 0 2px #FFFFFF)
 }
 
@@ -117,10 +118,115 @@ body {
     transition: 0.5s;
 }
 
-/*--Here starts the verify page -unique items*/
+/*--Here starts the debunk page unique items*/
+
+.article-buttons {
+    margin-top: 1rem;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-buttons > * {
+    margin-left: 10px;
+}
+
+#clear-button {
+    color: #cf0026;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-style: solid;
+    padding: 0.5em 1.5em;
+    border-radius: 5rem;
+    border-color: #cf0026;
+    border-width: 0.1rem;
+    transition: filter 0.5s;
+    transition: color 0.5s;
+    cursor:pointer;
+}
+
+#clear-button:hover {
+    color: #ffffff;
+    filter: drop-shadow(0 0 5px #cf0026)
+}
+
+#debunk-button {
+    background-color:rgba(0,0,0,0);
+    color: #09BC8A;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-style: solid;
+    padding: 0.5em 1.5em;
+    border-radius: 5rem;
+    border-color: #09BC8A;
+    border-width: 0.1rem;
+    font-size: 1rem;
+    transition: filter 0.5s;
+    transition: color 0.5s;
+}
+
+#debunk-button:hover {
+    color: #ffffff;
+    filter: drop-shadow(0 0 5px #09BC8A);
+    cursor: pointer;
+}
+
+#results {
+    padding:20px;
+    margin-bottom: 10px;
+    display:flex;
+    flex-direction: row;
+}
+
+#balance-bar {
+    background-color: #cf0026;
+    height: 20px;
+    width: 20rem;
+    border-radius: 5rem;
+}
+
+#real-bar {
+    background-color:#20A4F3;
+    height:20px;
+    width: 50%;
+    border-radius: 5rem 0rem 0rem 5rem;
+    transition: width 0.5s ease-out;
+}
+
+#real-tag {
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:0;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+#fake-tag {
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:0;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+#conclusion-tag {
+    margin-top:0;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#article-error-tag {
+    color:#b4b4b4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
 
 #articletext {
-    margin-top: 1rem;
     padding: 15px;
     resize: vertical;
     color: #b4b4b4;
@@ -132,9 +238,163 @@ body {
     border-radius: 1rem;
     outline: none;
     transition: filter 0.5s;
+    transition: position 0.5s ease-out;
 }
 
 #articletext:hover {
     transition: 0.5s;
-    filter: drop-shadow(0 0 2px #6200ee);
+    filter: drop-shadow(0 0 5px #6200ee);
+}
+
+/* About Us page unique elements */
+
+.quote-wrapper {
+    margin-top: 5rem;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-wrapper img {
+    width: 25%;
+    height: 25%;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+
+.quote-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    width: 30%;
+}
+
+.quote-wrapper p {
+    vertical-align: middle;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 100%;
+}
+
+.quote-wrapper p a {
+    font-style: normal;
+    font-size: 70%;
+}
+
+.mission-wrapper {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-wrapper h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.mission-body {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center
+}
+
+.mission-text {
+    margin-top: -15rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1rem;
+    width: 30%;
+}
+
+.mission-newspaper {
+    margin-top: 0;
+    margin-left: 40px;
+    font-size: 15rem;
+}
+
+/* contact page unique items */
+
+#contact-form {
+    margin-top: 3rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form input {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #121212;
+    border-radius: 5rem;
+    border-color: #1CB6C4;
+    border-width: 0.1rem;
+    border-style: solid;
+    outline: none;
+    font-size: 1rem;
+    color: #ffffff;
+    width: 200%;
+    transition: filter 0.5s;
+}
+
+#contact-form input:hover {
+    filter: drop-shadow(0 0 5px #1CB6C4)
+}
+
+#message-area {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #121212;
+    border-radius: 1rem;
+    border-color: #1CB6C4;
+    border-width: 0.1rem;
+    border-style: solid;
+    outline: none;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: filter 0.5s;
+    width: 200%;
+    resize: none;
+}
+
+#message-area:hover {
+    filter: drop-shadow(0 0 5px #1CB6C4)
+}
+
+#contact-error-tag {
+    color:#b4b4b4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#send-button {
+    cursor:pointer;
+    color: #1CB6C4;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-style: solid;
+    padding: 0.5em 1.5em;
+    border-radius: 5rem;
+    border-color: #1CB6C4;
+    border-width: 0.1rem;
+    transition: filter 0.5s;
+    transition: color 0.5s;
+}
+
+#send-button:hover {
+    color: #ffffff;
+    filter: drop-shadow(0 0 5px #1CB6C4)
 }

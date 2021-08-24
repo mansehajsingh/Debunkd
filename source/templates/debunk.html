@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.6">
+        <title>Debunk | Debunkd</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" type="text/css">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class = sub-wrapper>
+                <div class = "navbar">
+                    <ul class = "navlist">
+                        <li><a href = "/about">About</a></li>
+                        <li><a href = "#">Debunk Article</a></li>
+                        <li><a href = "/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <h1 class = "heading">Debunk Article</h1>
+                <h1 class = "subheading">Let's analyze the credibility of your source with machine learning. ✅</h1>
+                <div class = "article-buttons">
+                    <a id = "clear-button" onclick="clearText();">clear text</a>
+                    <a id = "debunk-button" onclick="sendArticle();">debunk</a>
+                </div>
+                <div id = "results">
+                    <p id = "real-tag">Real</p>
+                    <div id = "balance-bar">
+                        <div id = "real-bar"></div>
+                    </div>
+                    <p id= "fake-tag">Fake</p>
+                </div>
+                <p id = "conclusion-tag">Conclusion: <a id="conclusion-inner"></a></p>
+                <p id = "article-error-tag">Error</p>
+                <textarea id="articletext" name= "articletext" cols=70 rows = 30 placeholder="paste your article text here">{{prev_text}}</textarea>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='scripts/debunk.js')}}"></script>
+    </body>
+</html>

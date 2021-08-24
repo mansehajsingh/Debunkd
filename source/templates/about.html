@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.6">
+        <title>About | Debunkd</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" type="text/css">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class = sub-wrapper>
+                <div class = "navbar">
+                    <ul class = "navlist">
+                        <li><a href = "#">About</a></li>
+                        <li><a href = "/debunk">Debunk Article</a></li>
+                        <li><a href = "/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <h1 class = "heading">About Us</h1>
+                <h1 class = "subheading">Learn about our mission. 🌎</h1>
+                <div class = "quote-wrapper">
+                    <div class = "quote-text-wrapper">
+                        <p>"Don't believe everything you read on the internet just because there's 
+                            a picture with a quote next to it."<br><a>&emsp;-Abraham Lincoln</a></p>
+                    </div>
+                    <img src = "{{ url_for('static', filename='images/abrahamlincoln.jpg') }}" alt = "Abraham Lincoln">
+                </div>
+                <div class = "mission-wrapper">
+                    <h2>Dismantling Misinformation</h2>
+                    <div class = "mission-body">
+                        <p class = "mission-newspaper">📰</p>
+                        <p class = "mission-text">The digital age has birthed an era of innovation and remarkably easy access to information. 
+                            Unfortunately, this same accessibility has given rise to the spread of deliberately fabricated, 
+                            and often malicious, misinformation. Debunkd's primary goal is to contribute to a safer digital 
+                            environment for those of us with a mutual commitment to the truth. Using machine learning algorithms, 
+                            Debunkd evaluates the credibility of the content of a news article.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
